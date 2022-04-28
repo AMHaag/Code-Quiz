@@ -1,32 +1,61 @@
 * {
-box-sizing: border-box;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:  Helvetica, sans-serif;
+    background-color: lime;
+    margin: 0px;
 }
 
-
-
-
-/* header {
-    background: var(--secondary);
-    padding: 30px 25px;
-    border-bottom: 5px solid var(--primary);
-    } */
-
-
-body {
-    background: #333;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+header {
     display: flex;
-    }
-
-.top-bar {
+    flex-direction: row;
     justify-content: space-between;
+    align-content:flex-start;
+    background-color: aliceblue;
+    }
+button{
+    opacity: 1;
 }
-.highScoreListLink {
+#timerContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    align-items: center;
+    background-color: inherit;
 
+}
+#timerDisplay {
+    padding: 0px;
+    margin: 0px;
+    background-color: inherit;
+}
 
-.timer-top {
+#timerText {
+    padding: 0px;
+    margin: 0px;
+    background-color: inherit;
+}
+#highScoreViewer {
+    font-size: larger;
+    font-weight: lighter;
+    background-color: lightskyblue;
+    border-radius: 25px;
+    align-self: center;
+}
+
+#highScoreViewer:hover {
+    font-weight: normal;
+    background-color: skyblue;
+
+}
+
+.splashPage {
+    background-color: lime;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.splashPage h1 {
+    margin: 30% 0% 0% 0%;
+}
+.splashPage input {
+    width: 80%;
 }

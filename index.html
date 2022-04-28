@@ -8,17 +8,25 @@
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header>
-        <div class="top-bar">
-            <div class="highScoreListLink">
+    <header class="top-bar">
+            <button id="highScoreViewer">
                 View Highscores
+            </button>
+            <div id="timerContainer">
+                <h2 id="timerDisplay">0</h2>
+                <h4 id="timerText">Time Remaining</h4>
             </div>
-            <div class="timer-top">
-                <H1>0</H1>
-                <h4>Time Remaining</h4>
-            </div>
-    
-        </div>
     </header>
+    <hr>
+    <main>
+        <div class="splashPage">
+            <H1>Welcome to the Quiz</H1>
+            <p></p>
+            <input type="text" name="" placeholder="Type your name to start the quiz!" id="playerName">
+
+        </div>
+    </main>
+    <footer></footer>
 </body>
+<script src="./assets/script.js"></script>
 </html>
