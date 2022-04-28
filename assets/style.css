@@ -1,0 +1,32 @@
+* {
+box-sizing: border-box;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+
+/* header {
+    background: var(--secondary);
+    padding: 30px 25px;
+    border-bottom: 5px solid var(--primary);
+    } */
+
+
+body {
+    background: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    }
+
+.top-bar {
+    justify-content: space-between;
+}
+.highScoreListLink {
+
+
+.timer-top {
+}
