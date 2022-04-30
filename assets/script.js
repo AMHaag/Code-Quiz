@@ -1,7 +1,9 @@
 // ---- Global Variables ---- //
 var playerName = ''; //this stores the user inputted name
 var timeRemaining = 120; //this holds the value of the timer
+var playerResponse
 var answersCorrect = 0;
+var round = '0'
 
 //different main screen sections
 var welcomeScreen = document.getElementsByClassName('welcome-screen')[0].style;
@@ -31,10 +33,11 @@ function screenChanger(screenName){
 }
 
 //this is my dummy test function to throw into new code to make sure it works
-function testFunction(){
-    // console.log("Test Function Success");
-    // console.log(timeRemaining);
-    timerCountdown(10);
+function testFunction(event){
+    console.log("Test Function Success");
+    var playerResponse = event.srcElement.id;
+    console.log(playerResponse)
+    
 }
 
 
@@ -42,6 +45,18 @@ function testFunction(){
     //it's currrent set to run a test function to test other code
 var highScoreButton = document.querySelector("#highScoreViewer");
 highScoreButton.addEventListener("click",testFunction);
+//this is input form on the welcome, entering your name launches the quiz
+var nameSubmission = document.querySelector(".splash-page");
+nameSubmission.addEventListener("submit",startGame)
+//event listener for the answer buttons
+var quizContentEl = document.querySelector('.question-screen')
+quizContentEl.addEventListener("click",storePlayerResponse)
+
+function storePlayerResponse (event) {
+    var playerResponse = event.srcElement.id;
+    return playerResponse;
+}
+
 
 //this starts the timer and passes the number of seconds in via argument
 function timerCountdown(num){
@@ -53,14 +68,50 @@ function timerCountdown(num){
     }
 }
 
+//this runs the game
+function startGame (event){
+    event.preventDefault();
+    //set player name to input value
+    playerName = document.querySelector("input[name='name-entry'").value
+    if (!playerName){return false};
+    console.log(playerName + " has started a new quiz!")
+    timerCountdown(60); //starts the timer
 
+    //change to the quiz screen
+    screenChanger('question');
+
+
+    //this changes question/answer text, it asks the questions
+    function alexTrebek(){
+        var question = document.querySelector(".question-box");
+        var answerOne = document.querySelector("#a1");
+        var answerTwo = document.querySelector("#a2");
+        var answerThree = document.querySelector("#a3");
+        var answerFour = document.querySelector("#a4");
+
+        answerOne.innerText = questionList[round].answers[0];
+        answerTwo.innerText = questionList[round].answers[1];
+        answerThree.innerText = questionList[round].answers[2];
+        answerFour.innerText = questionList[round].answers[3];
+        question.innerText = questionList[round].question;
+    }
+    alexTrebek();
+
+    //this checks the users answer against the correct answer
+    function answerValidation (){
+        var correctAnswer = questionList[round].correct
+
+        
+
+    }
+    }
 
 
 
 
 //----Quiz questions and answers----//
 let questionList = [{
-    question:"Which of the following is not a data type in JavaScript?",
+    question:"Which of the following is not a primative data type in JavaScript?",
     answers: ["name","boolean","float", "integer"],
     correct:0
 },
@@ -83,11 +134,11 @@ let questionList = [{
     correct:2
 },
  {
-    question:"If a case inside of switch condition doesn’t include a break what happens?",
-    answers: ["You will hit an error and the code won’t run", 
-          "It will ignore that condition and return the default case", 
-          "It will execute the code matching that condition and keep executing cases until it does hit a break.", 
-          "The sun will explode."],
+    question:"In dog.sleep() sleep would be considered:",
+    answers: ["a method", 
+          "a property", 
+          "both", 
+          "I'm a cat person and refuse to answer."],
     correct:2
 }               
 
