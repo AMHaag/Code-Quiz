@@ -13,20 +13,26 @@
                 View Highscores
             </button>
             <div id="timerContainer">
-                <h2 id="timerDisplay">0</h2>
+                <h2 id="timerDisplay">n/a</h2>
                 <h4 id="timerText">Time Remaining</h4>
             </div>
     </header>
-    <hr>
-    <main>
-        <div class="splashPage">
-            <H1>Welcome to the Quiz</H1>
-            <p></p>
-            <input type="text" name="" placeholder="Type your name to start the quiz!" id="playerName">
-
+    <main class="welcome-screen" >
+        <div class="splash-page">
+            <H1 class="welcome-title">Welcome to the Quiz</H1>
+            <p class="welcome-text">It is five questions long and your score at the end is the number of correct answers multiplied by the number of seconds remaining.</p>
+            <input type="text" name="" placeholder="Type your name to start the quiz!" class="name-entry">
         </div>
     </main>
-    <footer></footer>
+    <main class="question-screen" style="display:none">
+        <span class="question-box"><h2 id="question-text">Question</h2></span>
+        <button class="answer-box" id="a1">Answer1</button>
+        <button class="answer-box" id="a2">Answer2</button>
+        <button class="answer-box" id="a3">Answer3</button>
+        <button class="answer-box" id="a4">Answer4</button>
+    </main>
+    <main class="high-score-screen" style="display:none">under construction</main>
+    <main class="end-game-screen" style="display:none">under construction</main>
 </body>
 <script src="./assets/script.js"></script>
 </html>

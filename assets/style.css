@@ -1,18 +1,30 @@
+:root {
+    --light:#8BA987;
+    --medium:#6C7767;
+    --dark:#4A6266;
+    --highlight:#F46B63;
+    --lowlight:#BE6263;
+}
+::placeholder{
+    color: black;
+    opacity: .89;
+}
 * {
     font-family:  Helvetica, sans-serif;
-    background-color: lime;
+    background-color: var(--dark);
     margin: 0px;
+    font-weight: lighter;
+
 }
 
+
+/* ----This is all the header styling---- */
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-content:flex-start;
-    background-color: aliceblue;
-    }
-button{
-    opacity: 1;
+    background-color: var(--medium);
 }
 #timerContainer {
     display: flex;
@@ -27,35 +39,86 @@ button{
     margin: 0px;
     background-color: inherit;
 }
-
 #timerText {
     padding: 0px;
     margin: 0px;
+    margin-bottom: 10px;
     background-color: inherit;
 }
 #highScoreViewer {
     font-size: larger;
-    font-weight: lighter;
-    background-color: lightskyblue;
-    border-radius: 25px;
+    background-color: var(--lowlight);
+    border-radius: 5px;
     align-self: center;
 }
-
-#highScoreViewer:hover {
-    font-weight: normal;
-    background-color: skyblue;
+button:hover, #highScoreViewer:hover {
+    background-color: var(--highlight);
 
 }
 
-.splashPage {
-    background-color: lime;
-    display: flex;
+
+/* ----This is all the styling for the Welcome scren---- */
+.welcome-screen {
+    background-color: var(--dark);
+    display: unset;
+}
+.splash-page {
+    background-color: inherit;
+    display:flex;
     align-items: center;
     flex-direction: column;
 }
-.splashPage h1 {
-    margin: 30% 0% 0% 0%;
+.welcome-title {
+    margin: 15% 0% 0% 0%;
+    background-color: inherit;
 }
-.splashPage input {
+.welcome-text {
+    margin: 5% 20% 5% 20%;
+}
+.name-entry {
     width: 80%;
+    max-width: 600px;;
+    background-color: var(--light);
+    border-radius: 5px;
+    min-height: 1.25em;
+    font-size: 1.5em;
+    text-align: center;
+    
 }
+
+/* ----This is all the styling for the question screen---- */
+.question-screen {
+    display:flex;
+    background-color: var(--dark);
+    flex-direction: column;
+    align-items: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding: 6%;
+}
+.question-box {
+    min-width: 82%;
+    min-height: 100px;
+    max-width: 690px;
+    background-color: inherit;
+    /* border: 2px solid black; */
+    margin-bottom: 5%;
+    padding: 12px;
+    font-size: large;
+}
+.question-box h2 {
+    background-color: inherit;
+}
+.answer-box {
+    min-width: 82%;
+    min-height: 50px;
+    /* border: 2px solid red; */
+    border-radius: 15px;
+    padding: 12px;
+    margin: 0px 12px 12px 12px;
+    background: var(--lowlight);
+
+
+}
+
+
