@@ -171,7 +171,7 @@ function endGame(){
     clearInterval(refreshIntervalId);
     var score = answersCorrect * timeRemaining;
     screenChanger('end');
-    alert(playerName + " " + score + " " + timeRemaining)
+    alert(playerName + " scored " + score + " points and had " + timeRemaining + "seconds remaining")
 }
 
 

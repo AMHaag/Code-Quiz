@@ -122,3 +122,30 @@ button:hover, #highScoreViewer:hover {
 }
 
 
+/* ----This is all the styling for the question screen---- */
+.end-game-screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+}
+#end-game-modal{
+   width: 600px;
+   max-width: 100%;
+   border-radius: 5px;
+   padding: 30px 50px;
+   background-color: var(--light);
+
+   
+}
+#save-score, #quit-game{
+    font-size: larger;
+    background-color: var(--lowlight);
+    border-radius: 5px;
+    align-self: center;
+    
+}

@@ -17,7 +17,7 @@
                 <h4 id="timerText">Time Remaining</h4>
             </div>
     </header>
-    <main class="welcome-screen" >
+    <main class="welcome-screen"  >
         <form class="splash-page">
             <H1 class="welcome-title">Welcome to the Quiz</H1>
             <p class="welcome-text">It is five questions long and your score at the end is the number of correct answers multiplied by the number of seconds remaining.</p>
@@ -33,7 +33,12 @@
     </main>
     <main class="high-score-screen" style="display:none">under construction</main>
     <main class="end-game-screen" style="display:none">
-        <h1 id="player-name-end">player</h1>
+        <div id="end-game-modal">
+            <h1>You've </h1>
+            <h2>subheader</h2>
+            <button id="save-score">save score</button>
+            <button id="quit-game">quit</button>
+        </div>
     </main>
 </body>
 <script src="./assets/script.js"></script>
